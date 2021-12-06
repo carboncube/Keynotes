@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>week1</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Challenge1_finished</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14515,90 +14515,270 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Python-&amp;-Data---Week-1">Python &amp; Data - Week 1<a class="anchor-link" href="#Python-&amp;-Data---Week-1">&#182;</a></h1><h2 id="Why-Python?">Why Python?<a class="anchor-link" href="#Why-Python?">&#182;</a></h2><ul>
-<li>易學</li>
-<li>容易找到參考資料</li>
-<li>豐富的 Library</li>
-<li>但是並非非 Python 不可 (JavaScript / Ruby)</li>
-</ul>
-<h2 id="%E9%81%8B%E8%A1%8C-Python-%E7%9A%84%E6%96%B9%E6%B3%95">&#36939;&#34892; Python &#30340;&#26041;&#27861;<a class="anchor-link" href="#%E9%81%8B%E8%A1%8C-Python-%E7%9A%84%E6%96%B9%E6%B3%95">&#182;</a></h2><ul>
-<li>使用 python(.exe) script.py 執行 (Windows, macOS, Linux...) - Command line script, GUI</li>
-<li>在伺服器上執行 (通常使用 Framework 如 django) - 建立網站</li>
-<li>在 iOS / iPad 上執行 (Pyto, Pythonista) - 可執行 Shortcut, Widget</li>
-<li>在 IoT 設備上執行 (使用 micropython) - 記錄感應器資料或執行動作</li>
-<li>在 SaaS 上執行 (如 repit.com) - 編寫 Bot</li>
-<li>在任何地方執行...</li>
-</ul>
-<h2 id="%E8%AA%B2%E7%A8%8B%E7%9B%AE%E6%A8%99">&#35506;&#31243;&#30446;&#27161;<a class="anchor-link" href="#%E8%AA%B2%E7%A8%8B%E7%9B%AE%E6%A8%99">&#182;</a></h2><ul>
-<li>透過使用 Python 解決生活上的問題</li>
-<li><p>輸入－處理－輸出 (Input-Process-Output, and repeat)</p>
-</li>
-<li><p>輸入(讀取及解釋)資料</p>
+<h1 id="Week-1-Challenge">Week 1 Challenge<a class="anchor-link" href="#Week-1-Challenge">&#182;</a></h1><p>問題：</p>
 <ul>
-<li>通過讀取格式化的資料檔案 (CSV, XML, JSON)</li>
-<li>通過 Application Programming Interface (API) 取得資料</li>
-<li>通過 Scraping 抓取原始資料</li>
-<li>自動化的方法瀏覽網頁取得資料</li>
-</ul>
-</li>
-<li><p>處理(計算及整合)資料</p>
+<li>有一系列外賣訂單（<code>orders</code>），分別要送到澳門、氹仔、路環</li>
+<li>你需要寫一個簡單的程式，將訂單按派送地點分流到不同的隊列：<code>macau_orders</code>、<code>taipa_orders</code>、<code>coloane_orders</code></li>
+<li><p>以及計算每個地點的等候時間：</p>
 <ul>
-<li>解譯原始資料 (Parsing)</li>
-<li>組合、計算結果 (Panda, Numpy)</li>
-<li>處理文字資料</li>
+<li>澳門 15 分鐘</li>
+<li>氹仔 30 分鐘</li>
+<li>路環 50 分鐘</li>
 </ul>
+<p>例如：澳門區目前有 5 個訂單，澳門區的等候時間則是 5 x 15 = 75 分鐘</p>
 </li>
-<li><p>輸出(整理及可視化)資料</p>
-<ul>
-<li>繪畫圖表 (Plot</li>
-<li>將資料輸出至檔案 (TXT, DOCX, XLSX 等格式)</li>
-</ul>
-</li>
-<li><p>自動化測試及驗證結果</p>
-</li>
-<li>處理例外情況</li>
-</ul>
-<h2 id="%E8%AA%B2%E5%A0%82%E5%9E%8B%E5%BC%8F">&#35506;&#22530;&#22411;&#24335;<a class="anchor-link" href="#%E8%AA%B2%E5%A0%82%E5%9E%8B%E5%BC%8F">&#182;</a></h2><ul>
-<li>透過範例方式講解</li>
-<li>Weekly Challenge</li>
 </ul>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Data%EF%BC%8D%E8%B3%87%E6%96%99">Data&#65293;&#36039;&#26009;<a class="anchor-link" href="#Data%EF%BC%8D%E8%B3%87%E6%96%99">&#182;</a></h2><p>來源：</p>
+<h2 id="%E8%A8%82%E5%96%AE%E5%88%97%E8%A1%A8">&#35330;&#21934;&#21015;&#34920;<a class="anchor-link" href="#%E8%A8%82%E5%96%AE%E5%88%97%E8%A1%A8">&#182;</a></h2><p>採用 List 結構，而每個 List item 中包含 Dictionary：</p>
 <ul>
-<li>人手記錄 (如：統計局、平台)</li>
-<li>自動化方式記錄（如：感應器記錄溫度、濕度等）</li>
-<li>通過抓取網上資料 (Scraping)</li>
-<li>開放 API</li>
+<li>id 是序號</li>
+<li>food 是下單的食物</li>
+<li>destination 是目的地</li>
 </ul>
-<blockquote><p>注意使用授權、私隱以及道德問題，如有疑問應徵詢資料持有人的同意。</p>
-</blockquote>
-<h2 id="%E8%B3%87%E6%96%99%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7">&#36039;&#26009;&#30340;&#37325;&#35201;&#24615;<a class="anchor-link" href="#%E8%B3%87%E6%96%99%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7">&#182;</a></h2><ul>
-<li>我們可以通過資料得知一個人（或一群人）的喜好、行為甚至健康狀況</li>
-<li>各行各業都需要數據，如零售、教育、公共事業、公共衛生</li>
-<li>大數據－當數據的量足夠大，所產生的效果更加大</li>
-</ul>
-<h2 id="(%E4%B8%8D%E5%A5%BD%E7%9A%84)%E4%BE%8B%E5%AD%90">(&#19981;&#22909;&#30340;)&#20363;&#23376;<a class="anchor-link" href="#(%E4%B8%8D%E5%A5%BD%E7%9A%84)%E4%BE%8B%E5%AD%90">&#182;</a></h2><ul>
-<li>Google 可以通過人搜尋的關建字得知最多人搜尋的產品，它可以將資料提供給零售商，零售商可以在目標產品的搜尋結果賣廣告。</li>
-<li>Facebook 的做法可以更加個人化，因為需要登入，它可以為每個人建立一個檔案，以記錄每個人的行為，分析他們的喜好。</li>
-<li>智能設備如手錶，所獲得的資料更加個人化，甚至可以獲得當事人不知道的一些資料。</li>
-</ul>
-<blockquote><p>所以為何很多產品和服務都是免費，因為由你提供的數據價值遠大於他們提供的服務</p>
-</blockquote>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">orders</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span> <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="s1">&#39;food&#39;</span><span class="p">:</span> <span class="s1">&#39;steak&#39;</span><span class="p">,</span>     <span class="s1">&#39;destination&#39;</span><span class="p">:</span> <span class="s1">&#39;macau&#39;</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="s1">&#39;food&#39;</span><span class="p">:</span> <span class="s1">&#39;hamburger&#39;</span><span class="p">,</span> <span class="s1">&#39;destination&#39;</span><span class="p">:</span> <span class="s1">&#39;taipa&#39;</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>  <span class="s1">&#39;food&#39;</span><span class="p">:</span> <span class="s1">&#39;pizza&#39;</span><span class="p">,</span>     <span class="s1">&#39;destination&#39;</span><span class="p">:</span> <span class="s1">&#39;coloane&#39;</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>  <span class="s1">&#39;food&#39;</span><span class="p">:</span> <span class="s1">&#39;speghetti&#39;</span><span class="p">,</span> <span class="s1">&#39;destination&#39;</span><span class="p">:</span> <span class="s1">&#39;macau&#39;</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>  <span class="s1">&#39;food&#39;</span><span class="p">:</span> <span class="s1">&#39;pizza&#39;</span><span class="p">,</span>     <span class="s1">&#39;destination&#39;</span><span class="p">:</span> <span class="s1">&#39;macau&#39;</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>  <span class="s1">&#39;food&#39;</span><span class="p">:</span> <span class="s1">&#39;hamburger&#39;</span><span class="p">,</span> <span class="s1">&#39;destination&#39;</span><span class="p">:</span> <span class="s1">&#39;taipa&#39;</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>  <span class="s1">&#39;food&#39;</span><span class="p">:</span> <span class="s1">&#39;hamburger&#39;</span><span class="p">,</span> <span class="s1">&#39;destination&#39;</span><span class="p">:</span> <span class="s1">&#39;macau&#39;</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>  <span class="s1">&#39;food&#39;</span><span class="p">:</span> <span class="s1">&#39;hamburger&#39;</span><span class="p">,</span> <span class="s1">&#39;destination&#39;</span><span class="p">:</span> <span class="s1">&#39;taipa&#39;</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>  <span class="s1">&#39;food&#39;</span><span class="p">:</span> <span class="s1">&#39;steak&#39;</span><span class="p">,</span>     <span class="s1">&#39;destination&#39;</span><span class="p">:</span> <span class="s1">&#39;coloane&#39;</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;food&#39;</span><span class="p">:</span> <span class="s1">&#39;hamburger&#39;</span><span class="p">,</span> <span class="s1">&#39;destination&#39;</span><span class="p">:</span> <span class="s1">&#39;macau&#39;</span> <span class="p">},</span>
+<span class="p">]</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="1.-%E5%B0%87-order-%E6%8C%89-destination-key-%E5%88%86%E6%B4%BE%E5%88%B0%E4%B8%8D%E5%90%8C%E7%9A%84-list">1. &#23559; <code>order</code> &#25353; <code>destination</code> key &#20998;&#27966;&#21040;&#19981;&#21516;&#30340; list<a class="anchor-link" href="#1.-%E5%B0%87-order-%E6%8C%89-destination-key-%E5%88%86%E6%B4%BE%E5%88%B0%E4%B8%8D%E5%90%8C%E7%9A%84-list">&#182;</a></h2><p>可以使用 <code>for</code> 或 List Comprehension</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">macau_orders</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">taipa_orders</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">coloane_orders</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Insert your answer here</span>
+<span class="k">for</span> <span class="n">order</span> <span class="ow">in</span> <span class="n">orders</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">order</span><span class="p">[</span><span class="s1">&#39;destination&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;macau&#39;</span><span class="p">:</span>
+        <span class="n">macau_orders</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">order</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">order</span><span class="p">[</span><span class="s1">&#39;destination&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;taipa&#39;</span><span class="p">:</span>
+        <span class="n">taipa_orders</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">order</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">order</span><span class="p">[</span><span class="s1">&#39;destination&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;coloane&#39;</span><span class="p">:</span>
+        <span class="n">coloane_orders</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">order</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">macau_orders</span><span class="si">=}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">taipa_orders</span><span class="si">=}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">coloane_orders</span><span class="si">=}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>macau_orders=[{&#39;id&#39;: 1, &#39;food&#39;: &#39;steak&#39;, &#39;destination&#39;: &#39;macau&#39;}, {&#39;id&#39;: 4, &#39;food&#39;: &#39;speghetti&#39;, &#39;destination&#39;: &#39;macau&#39;}, {&#39;id&#39;: 5, &#39;food&#39;: &#39;pizza&#39;, &#39;destination&#39;: &#39;macau&#39;}, {&#39;id&#39;: 7, &#39;food&#39;: &#39;hamburger&#39;, &#39;destination&#39;: &#39;macau&#39;}, {&#39;id&#39;: 10, &#39;food&#39;: &#39;hamburger&#39;, &#39;destination&#39;: &#39;macau&#39;}]
+taipa_orders=[{&#39;id&#39;: 2, &#39;food&#39;: &#39;hamburger&#39;, &#39;destination&#39;: &#39;taipa&#39;}, {&#39;id&#39;: 6, &#39;food&#39;: &#39;hamburger&#39;, &#39;destination&#39;: &#39;taipa&#39;}, {&#39;id&#39;: 8, &#39;food&#39;: &#39;hamburger&#39;, &#39;destination&#39;: &#39;taipa&#39;}]
+coloane_orders=[{&#39;id&#39;: 3, &#39;food&#39;: &#39;pizza&#39;, &#39;destination&#39;: &#39;coloane&#39;}, {&#39;id&#39;: 9, &#39;food&#39;: &#39;steak&#39;, &#39;destination&#39;: &#39;coloane&#39;}]
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>得出結果應為：</p>
+<div class="highlight"><pre><span></span><span class="n">macau_orders</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;food&#39;</span><span class="p">:</span> <span class="s1">&#39;steak&#39;</span><span class="p">,</span> <span class="s1">&#39;destination&#39;</span><span class="p">:</span> <span class="s1">&#39;macau&#39;</span><span class="p">},</span> 
+    <span class="p">{</span><span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;food&#39;</span><span class="p">:</span> <span class="s1">&#39;speghetti&#39;</span><span class="p">,</span> <span class="s1">&#39;destination&#39;</span><span class="p">:</span> <span class="s1">&#39;macau&#39;</span><span class="p">},</span> 
+    <span class="p">{</span><span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;food&#39;</span><span class="p">:</span> <span class="s1">&#39;pizza&#39;</span><span class="p">,</span> <span class="s1">&#39;destination&#39;</span><span class="p">:</span> <span class="s1">&#39;macau&#39;</span><span class="p">},</span> 
+    <span class="p">{</span><span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span> <span class="s1">&#39;food&#39;</span><span class="p">:</span> <span class="s1">&#39;hamburger&#39;</span><span class="p">,</span> <span class="s1">&#39;destination&#39;</span><span class="p">:</span> <span class="s1">&#39;macau&#39;</span><span class="p">},</span> 
+    <span class="p">{</span><span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;food&#39;</span><span class="p">:</span> <span class="s1">&#39;hamburger&#39;</span><span class="p">,</span> <span class="s1">&#39;destination&#39;</span><span class="p">:</span> <span class="s1">&#39;macau&#39;</span><span class="p">}</span>
+<span class="p">]</span>
+<span class="n">taipa_orders</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;food&#39;</span><span class="p">:</span> <span class="s1">&#39;hamburger&#39;</span><span class="p">,</span> <span class="s1">&#39;destination&#39;</span><span class="p">:</span> <span class="s1">&#39;taipa&#39;</span><span class="p">},</span> 
+    <span class="p">{</span><span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;food&#39;</span><span class="p">:</span> <span class="s1">&#39;hamburger&#39;</span><span class="p">,</span> <span class="s1">&#39;destination&#39;</span><span class="p">:</span> <span class="s1">&#39;taipa&#39;</span><span class="p">},</span> 
+    <span class="p">{</span><span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;food&#39;</span><span class="p">:</span> <span class="s1">&#39;hamburger&#39;</span><span class="p">,</span> <span class="s1">&#39;destination&#39;</span><span class="p">:</span> <span class="s1">&#39;taipa&#39;</span><span class="p">}</span>
+<span class="p">]</span>
+<span class="n">coloane_orders</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;food&#39;</span><span class="p">:</span> <span class="s1">&#39;pizza&#39;</span><span class="p">,</span> <span class="s1">&#39;destination&#39;</span><span class="p">:</span> <span class="s1">&#39;coloane&#39;</span><span class="p">},</span> 
+    <span class="p">{</span><span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span> <span class="s1">&#39;food&#39;</span><span class="p">:</span> <span class="s1">&#39;steak&#39;</span><span class="p">,</span> <span class="s1">&#39;destination&#39;</span><span class="p">:</span> <span class="s1">&#39;coloane&#39;</span><span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="%E6%9C%AC%E9%80%B1%E5%85%A7%E5%AE%B9">&#26412;&#36913;&#20839;&#23481;<a class="anchor-link" href="#%E6%9C%AC%E9%80%B1%E5%85%A7%E5%AE%B9">&#182;</a></h2><ol>
-<li>熟悉 VSCode, Juypter Notebook <a href="jupyter_notebook.html">這裏</a></li>
-<li>Cheatsheet <a href="cheatsheet1.html">這裏</a></li>
-<li>Weekly Challenge <a href="challenge1.html">這裏</a></li>
-<li>Examples <a href="examples1.html">這裏</a></li>
+<h2 id="2.-%E6%A0%B9%E6%93%9A%E5%88%86%E5%8D%80%E7%B5%90%E6%9E%9C%E8%A8%88%E7%AE%97%E7%9B%AE%E7%9A%84%E5%9C%B0%E7%AD%89%E5%80%99%E6%99%82%E9%96%93">2. &#26681;&#25818;&#20998;&#21312;&#32080;&#26524;&#35336;&#31639;&#30446;&#30340;&#22320;&#31561;&#20505;&#26178;&#38291;<a class="anchor-link" href="#2.-%E6%A0%B9%E6%93%9A%E5%88%86%E5%8D%80%E7%B5%90%E6%9E%9C%E8%A8%88%E7%AE%97%E7%9B%AE%E7%9A%84%E5%9C%B0%E7%AD%89%E5%80%99%E6%99%82%E9%96%93">&#182;</a></h2><ul>
+<li>澳門 15 分鐘</li>
+<li>氹仔 30 分鐘</li>
+<li>路環 50 分鐘</li>
+</ul>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">macau_wait</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">taipa_wait</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">coloane_wait</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># Insert your answer here</span>
+<span class="n">macau_wait</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">macau_orders</span><span class="p">)</span> <span class="o">*</span> <span class="mi">15</span>
+<span class="n">taipa_wait</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">taipa_orders</span><span class="p">)</span> <span class="o">*</span> <span class="mi">30</span>
+<span class="n">coloane_wait</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">coloane_orders</span><span class="p">)</span> <span class="o">*</span> <span class="mi">50</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;澳門區等候時間 </span><span class="si">{</span><span class="n">macau_wait</span><span class="si">:</span><span class="s1">d</span><span class="si">}</span><span class="s1"> 分鐘&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;氹仔區等候時間 </span><span class="si">{</span><span class="n">taipa_wait</span><span class="si">:</span><span class="s1">d</span><span class="si">}</span><span class="s1"> 分鐘&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;路環區等候時間 </span><span class="si">{</span><span class="n">coloane_wait</span><span class="si">:</span><span class="s1">d</span><span class="si">}</span><span class="s1"> 分鐘&#39;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>澳門區等候時間 75 分鐘
+氹仔區等候時間 90 分鐘
+路環區等候時間 100 分鐘
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>得出結果應為:</p>
+<p>澳門區等候時間 75 分鐘<br>
+氹仔區等候時間 90 分鐘<br>
+路環區等候時間 100 分鐘</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="3.-Extra:-%E5%BE%9E%E8%B3%87%E6%96%99%E4%B8%AD%E6%89%BE%E5%87%BA%E6%9C%80%E5%8F%97%E6%AD%A1%E8%BF%8E%E9%A3%9F%E7%89%A9">3. Extra: &#24478;&#36039;&#26009;&#20013;&#25214;&#20986;&#26368;&#21463;&#27489;&#36814;&#39135;&#29289;<a class="anchor-link" href="#3.-Extra:-%E5%BE%9E%E8%B3%87%E6%96%99%E4%B8%AD%E6%89%BE%E5%87%BA%E6%9C%80%E5%8F%97%E6%AD%A1%E8%BF%8E%E9%A3%9F%E7%89%A9">&#182;</a></h2><p>在 <code>orders</code> 中尋找，可以用以下方式找出：</p>
+<ol>
+<li>使用 <code>for</code> 計算每種食物的訂單數</li>
+<li>使用 <code>sorted()</code> 將每種食物的訂單數排序</li>
+<li>取得最多訂單的食物 (<code>ordered_list</code> 中的第一位)</li>
 </ol>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">food_list</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="c1"># Answer: count food here</span>
+<span class="k">for</span> <span class="n">order</span> <span class="ow">in</span> <span class="n">orders</span><span class="p">:</span>
+    <span class="n">food</span> <span class="o">=</span> <span class="n">order</span><span class="p">[</span><span class="s1">&#39;food&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">food</span> <span class="ow">in</span> <span class="n">food_list</span><span class="p">:</span>
+        <span class="n">food_list</span><span class="p">[</span><span class="n">food</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">food_list</span><span class="p">[</span><span class="n">food</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="c1"># Answer: sort food_list here</span>
+<span class="n">ordered_list</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">food_list</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">v</span><span class="p">:</span> <span class="n">v</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> 
+
+<span class="n">most_popular</span> <span class="o">=</span> <span class="n">ordered_list</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;最受歡迎的食物是 </span><span class="si">{</span><span class="n">most_popular</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>最受歡迎的食物是 hamburger
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>得出結果應為:</p>
+<p>最受歡迎的食物是 hamburger</p>
 
 </div>
 </div>
