@@ -13,6 +13,11 @@ autoscale: true
 
 ---
 
+## Keynotes
+### `https://pydata.taipa.dev`
+
+---
+
 ## 為甚麼是 Python?
 
 * 易學
@@ -120,7 +125,5 @@ autoscale: true
 
 ## Visual Studio Code &
 ## Jupyter Notebook
-
----
 
 <!-- prettier-ignore-end -->
