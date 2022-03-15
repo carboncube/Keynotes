@@ -7,3 +7,4 @@
 - Week 3-4 [Keynotes](week3/week3.html)
 - Week 5 [Keynotes](week5/week5.html)
 - Week 6 [Keynotes](week6/week6.html)
+- Week 8 [Keynotes](week8/week8.html)
