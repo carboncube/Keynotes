@@ -15,3 +15,4 @@
 - Week 13 - Web Scraping - 總結 [Keynotes](week13/week13.html)
 - Week 15 - 格式與資料交換(上) [Keynotes](week15/week15.html)
 - Week 16 - 格式與資料交換(下) [Keynotes](week16/week16.html)
+- Week 17 - Pandas [Keynotes](week17/week17.html)
